@@ -10,6 +10,12 @@
 
 body {
   font-family: "Inter", Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  background: url("../images/pattern-curve.svg");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: contain;
 }
 
 .wrapper {
@@ -19,8 +25,14 @@ body {
 
 .carousel {
   max-width: 600px;
-  margin: 1em auto;
+  margin: 0 auto;
   text-align: center;
+}
+
+.slide {
+  display: -ms-grid;
+  display: grid;
+  color: #202046;
 }
 
 .slide__avatar-container {
@@ -59,6 +71,42 @@ body {
   border-radius: 5px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.slide__info-container {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+.slide__name {
+  font-size: 1.2em;
+  margin-bottom: .15em;
+}
+
+.slide__job-role {
+  color: #babacf;
+}
+
+.slide__quotes {
+  margin: 2em 0 1em;
+  font-size: 1.1em;
+  font-weight: 300;
+  position: relative;
+}
+
+.slide__quotes::before {
+  content: '';
+  display: block;
+  background-image: url("../images/pattern-quotes.svg");
+  background-repeat: no-repeat;
+  width: 120px;
+  height: 100px;
+  position: absolute;
+  top: -53px;
+  left: 50%;
+  -webkit-transform: translateX(-50%) scale(0.5);
+          transform: translateX(-50%) scale(0.5);
 }
 
 .attribution {
