@@ -11,4 +11,63 @@
 body {
   font-family: "Inter", Arial, Helvetica, sans-serif;
 }
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.carousel {
+  max-width: 600px;
+  margin: 1em auto;
+  text-align: center;
+}
+
+.slide__avatar-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 330px;
+  max-width: 350px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slide__avatar-container::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../images/pattern-bg.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.slide__avatar {
+  max-width: 77%;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.attribution {
+  margin: 5em 0 1em;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
 /*# sourceMappingURL=main.css.map */
