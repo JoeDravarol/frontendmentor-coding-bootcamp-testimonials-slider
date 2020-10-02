@@ -2,6 +2,7 @@
 
 $dark-blue: hsl(240, 38%, 20%);
 $grayish-blue: hsl(240, 18%, 77%);
+$pinkish-purple: #e4dff5;
 $pattern-quotes-size: (
   "width": 120px,
   "height": 100px
@@ -36,11 +37,47 @@ body {
   max-width: 600px;
   margin: 0 auto;
   text-align:  center;
+  position: relative;
+
+  &__buttons {
+    display: flex;
+    position: absolute;
+    bottom: 2.5%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__button {
+    width: 45px;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+      background: $pinkish-purple;
+    }
+    
+    &--previous {
+      border-top-left-radius: 50%;
+      border-bottom-left-radius: 50%;
+    }
+
+    &--next {
+      border-top-right-radius: 50%;
+      border-bottom-right-radius: 50%;
+    }
+  }
 }
 
 .slide {
-  display: grid;
+  display: none;
   color: $dark-blue;
+
+  &--active {
+    display: grid;
+  }
 
   &__avatar-container {
     display: flex;

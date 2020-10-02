@@ -27,12 +27,51 @@ body {
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
+  position: relative;
+}
+
+.carousel__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 2.5%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.carousel__button {
+  width: 45px;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.carousel__button:hover {
+  background: #e4dff5;
+}
+
+.carousel__button--previous {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.carousel__button--next {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
 }
 
 .slide {
+  display: none;
+  color: #202046;
+}
+
+.slide--active {
   display: -ms-grid;
   display: grid;
-  color: #202046;
 }
 
 .slide__avatar-container {
