@@ -68,6 +68,10 @@ body {
       border-top-right-radius: 50%;
       border-bottom-right-radius: 50%;
     }
+
+    & > * {
+      pointer-events: none;
+    }
   }
 }
 

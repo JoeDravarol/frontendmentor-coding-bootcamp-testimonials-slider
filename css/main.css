@@ -64,6 +64,10 @@ body {
   border-bottom-right-radius: 50%;
 }
 
+.carousel__button > * {
+  pointer-events: none;
+}
+
 .slide {
   display: none;
   color: #202046;
