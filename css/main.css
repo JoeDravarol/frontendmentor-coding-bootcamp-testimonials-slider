@@ -110,6 +110,8 @@ body {
   border-radius: 5px;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-box-shadow: -93px 98px 180px -120px rgba(0, 0, 0, 0.75);
+          box-shadow: -93px 98px 180px -120px rgba(0, 0, 0, 0.75);
 }
 
 .slide__info-container {
